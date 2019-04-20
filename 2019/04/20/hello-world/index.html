@@ -3,21 +3,21 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Luescan漏洞扫描系统设计 | 个人博客|My Bolg</title>
+  <title>Luescan漏洞扫描系统设计 | 个人博客|Zil0ng&#39;s Bolg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LuescanLuescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并">
+  <meta name="description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Luescan漏洞扫描系统设计">
 <meta property="og:url" content="https://blog.zilong3033.cn/2019/04/20/hello-world/index.html">
-<meta property="og:site_name" content="个人博客|My Bolg">
-<meta property="og:description" content="LuescanLuescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并">
+<meta property="og:site_name" content="个人博客|Zil0ng&#39;s Bolg">
+<meta property="og:description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-20T07:22:48.501Z">
+<meta property="og:updated_time" content="2019-04-20T07:25:11.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Luescan漏洞扫描系统设计">
-<meta name="twitter:description" content="LuescanLuescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并">
+<meta name="twitter:description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
   
-    <link rel="alternate" href="/atom.xml" title="个人博客|My Bolg" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="个人博客|Zil0ng&#39;s Bolg" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +38,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">个人博客|My Bolg</a>
+        <a href="/" id="logo">个人博客|Zil0ng&#39;s Bolg</a>
       </h1>
       
         <h2 id="subtitle-wrap">
@@ -90,7 +90,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Luescan"><a href="#Luescan" class="headerlink" title="Luescan"></a>Luescan</h1><p>Luescan is Web vulnerability scanner</p>
+        <p>Luescan is Web vulnerability scanner</p>
 <h3 id="一-设计初期思路"><a href="#一-设计初期思路" class="headerlink" title="一. 设计初期思路"></a>一. 设计初期思路</h3><h4 id="1-分为两个引擎"><a href="#1-分为两个引擎" class="headerlink" title="1.分为两个引擎"></a>1.分为两个引擎</h4><h6 id="（1）爬虫式扫描引擎："><a href="#（1）爬虫式扫描引擎：" class="headerlink" title="（1）爬虫式扫描引擎："></a>（1）爬虫式扫描引擎：</h6><pre><code>特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及
 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学web安全
 检测技术。最后，给予扫描结果，给出网站威胁情报以及漏洞报告。
@@ -112,7 +112,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://blog.zilong3033.cn/2019/04/20/hello-world/" data-id="cjup64giv0000t4okqsf8tm6e" class="article-share-link">Share</a>
+      <a data-url="https://blog.zilong3033.cn/2019/04/20/hello-world/" data-id="cjup6rlon00002ookrhqaqbq5" class="article-share-link">Share</a>
       
       
     </footer>
