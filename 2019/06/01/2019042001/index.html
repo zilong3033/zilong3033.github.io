@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客|Zil0ng&#39;s Bolg">
-<meta property="og:url" content="https://blog.zilong3033.cn/archives/2019/index.html">
+<meta name="description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Luescan漏洞扫描系统设计">
+<meta property="og:url" content="https://blog.zilong3033.cn/2019/06/01/2019042001/index.html">
 <meta property="og:site_name" content="个人博客|Zil0ng&#39;s Bolg">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-20T07:25:11.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客|Zil0ng&#39;s Bolg">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="Luescan漏洞扫描系统设计">
+<meta name="twitter:description" content="Luescan is Web vulnerability scanner 一. 设计初期思路1.分为两个引擎（1）爬虫式扫描引擎：特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及 awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学we">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.zilong3033.cn/archives/2019/">
+  <link rel="canonical" href="https://blog.zilong3033.cn/2019/06/01/2019042001/">
 
 
 
 
 
-  <title>归档 | 个人博客|Zil0ng's Bolg</title>
+  <title>Luescan漏洞扫描系统设计 | 个人博客|Zil0ng's Bolg</title>
   
 
 
@@ -153,7 +154,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,72 +258,142 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 1 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.zilong3033.cn/2019/06/01/2019042001/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zil0ng3033">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客|Zil0ng's Bolg">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/06/01/2019042001/" itemprop="url">
-              
-                <span itemprop="name">Luescan漏洞扫描系统设计</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Luescan漏洞扫描系统设计</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-01T12:22:41+08:00" content="2019-06-01">
-          06-01
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-01T12:22:41+08:00">
+                2019-06-01
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Luescan is Web vulnerability scanner</p>
+<h3 id="一-设计初期思路"><a href="#一-设计初期思路" class="headerlink" title="一. 设计初期思路"></a>一. 设计初期思路</h3><h4 id="1-分为两个引擎"><a href="#1-分为两个引擎" class="headerlink" title="1.分为两个引擎"></a>1.分为两个引擎</h4><h6 id="（1）爬虫式扫描引擎："><a href="#（1）爬虫式扫描引擎：" class="headerlink" title="（1）爬虫式扫描引擎："></a>（1）爬虫式扫描引擎：</h6><pre><code>特点：获取网站信息，通过网站信息，整体感知网站特点，对获取的数据进行分析处理，并调用主流安全工具的api（sqlmapapi.py以及
+awvs11的api等），并通过传统方式分析网站信息并加载payload，进行漏洞验证。后期打算学习一段时间机器学习，并引入机器学web安全
+检测技术。最后，给予扫描结果，给出网站威胁情报以及漏洞报告。
+主要扫描常见web漏洞(sql注入，xss，csrf等等)
+    1.对于sql注入：
+       （1）调用sqlmpapi.py进行漏洞扫描
+       （2）根据特征，调用payload字典进行验证。
+    2.对于xss:
+        (1)反射型xss 分析url特征，加载payload，并对响应包分析，以确定xss漏洞。
+       （2）对于存储型xss漏洞，由于大量验证可能污染数据库，同时，可能造成业务功能异常。
+    3.对于csrf漏洞，尝试匹配表单或者ajax，以确定是否存在token，或者验证码信息。
+    4.对于xxe,尝试分析前后端请求是否使用了xml，如果使用xml，加载payload做简单验证。
+    5.对于URL跳转漏洞，匹配常见变量名，给出可能情况。
+    6.尝试爬取网站敏感信息(源码泄露，目录枚举，错误信息页面，用户敏感数据泄露等等。)
+</code></pre><h6 id="（2）插件式扫描引擎："><a href="#（2）插件式扫描引擎：" class="headerlink" title="（2）插件式扫描引擎："></a>（2）插件式扫描引擎：</h6><pre><code>模块化，插件化，用户可以自己写py或者json插件。
+特点：提供统一插件接口，主要验证通用漏洞。框架漏洞，中间件漏洞，系统漏洞等。
+同时，还有辅助验证脚本等。
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
 
       
 
-    </div>
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +401,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -350,8 +425,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -393,6 +477,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-设计初期思路"><span class="nav-number">1.</span> <span class="nav-text">一. 设计初期思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-分为两个引擎"><span class="nav-number">1.1.</span> <span class="nav-text">1.分为两个引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#（1）爬虫式扫描引擎："><span class="nav-number">1.1.0.1.</span> <span class="nav-text">（1）爬虫式扫描引擎：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#（2）插件式扫描引擎："><span class="nav-number">1.1.0.2.</span> <span class="nav-text">（2）插件式扫描引擎：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -533,6 +633,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
