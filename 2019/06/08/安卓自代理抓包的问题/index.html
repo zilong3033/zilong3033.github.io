@@ -87,14 +87,14 @@
 <meta property="og:site_name" content="个人博客|Zil0ng&#39;s Bolg">
 <meta property="og:description" content="一. 抓包测试小记​      在测试过程中，使用burp和fiddler一直抓不到一些自代理的安卓客户端测试的数据包，抓不到数据包就无法测试服务端。抽空研究了下，大概记录下使用​   Proxifier和fiddler，在模拟器环境下抓取安卓客户端数据包。 配置proxy  fiddler的8080端口，然后配置rules：  这里配置applications为夜深模拟器的handle进程，一截">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/1565251299184.png">
-<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/1565251534492.png">
-<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/1565251774425.png">
+<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code/blog/zilong3033.github.io/source/_posts/安卓自代理抓包的问题/1565251299184.png">
+<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code/blog/zilong3033.github.io/source/_posts/安卓自代理抓包的问题/1565251534492.png">
+<meta property="og:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code/blog/zilong3033.github.io/source/_posts/安卓自代理抓包的问题/1565251774425.png">
 <meta property="og:updated_time" content="2019-08-08T08:36:23.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安卓自代理抓包的问题">
 <meta name="twitter:description" content="一. 抓包测试小记​      在测试过程中，使用burp和fiddler一直抓不到一些自代理的安卓客户端测试的数据包，抓不到数据包就无法测试服务端。抽空研究了下，大概记录下使用​   Proxifier和fiddler，在模拟器环境下抓取安卓客户端数据包。 配置proxy  fiddler的8080端口，然后配置rules：  这里配置applications为夜深模拟器的handle进程，一截">
-<meta name="twitter:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/1565251299184.png">
+<meta name="twitter:image" content="https://blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code/blog/zilong3033.github.io/source/_posts/安卓自代理抓包的问题/1565251299184.png">
 
 
 
@@ -346,11 +346,11 @@
       
         <h2 id="一-抓包测试小记"><a href="#一-抓包测试小记" class="headerlink" title="一. 抓包测试小记"></a>一. 抓包测试小记</h2><p>​      在测试过程中，使用burp和fiddler一直抓不到一些自代理的安卓客户端测试的数据包，抓不到数据包就无法测试服务端。<br>抽空研究了下，大概记录下使用​   Proxifier和fiddler，在模拟器环境下抓取安卓客户端数据包。</p>
 <p>配置proxy</p>
-<p><img src="/.cn//code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251299184.png" alt="1565251312636"></p>
+<p><img src="//blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251299184.png" alt="1565251312636"></p>
 <p>fiddler的8080端口，然后配置rules：</p>
-<p><img src="/.cn//code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251534492.png" alt="1565251534492"></p>
+<p><img src="//blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251534492.png" alt="1565251534492"></p>
 <p>这里配置applications为夜深模拟器的handle进程，一截获该进程发出的请求。安装app到模拟器里，就可以抓到相关数据包了。</p>
-<p><img src="/.cn//code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251774425.png" alt="1565251774425"></p>
+<p><img src="//blog.zilong3033.cn/2019/06/08/安卓自代理抓包的问题/code\blog\zilong3033.github.io\source\_posts\安卓自代理抓包的问题\1565251774425.png" alt="1565251774425"></p>
 <p>大概记录下，刚开始使用burp，不知道啥原因，一直抓不到数据包，耗费了大概半个多小时找原因，但是还是没有找到，最后放弃burp，使用fiddler抓包，经过一番尝试，终于抓到相关数据包了。</p>
 <p>  抽空再试试安卓真机下，抓取自代理数据包。</p>
 
