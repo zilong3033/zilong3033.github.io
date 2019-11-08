@@ -282,10 +282,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2019/11/08/某动态防护系统原理简单调试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zil0ng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客|Zil0ng's Bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/08/某动态防护系统原理简单调试/" itemprop="url">某动态防护系统原理简单调试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-08T11:16:17+08:00">
+                2019-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="一-介绍"><a href="#一-介绍" class="headerlink" title="一.介绍"></a>一.介绍</h5><p>​        某防护系统具有反重放，反爬虫机制，最明显的特征就是在数据包中加MmEwMD参数，当作TOKEN来使用。还有相关参数FSSBBIl1UgzbN7N80S，FSSBBIl1UgzbN7N80T，刚开始不明白这几个参数的作用，抓了几个包后，才发现是一个token，防止重放的，这严重影响了我们渗透测试。。</p>
+<p>   MmEwMD的产生，是由动态防护系统在静态页面自动填充的js混淆的代码产生的。期间动态防护系统会response  两个cookie（FSSBBIl1UgzbN7N80S，FSSBBIl1UgzbN7N80T），共同来产生token</p>
+<h5 id="二-调试"><a href="#二-调试" class="headerlink" title="二.调试"></a>二.调试</h5><p>​      跟着js的ajax走，发现是从jquery库里面，这里进入到防护的加密的js里面：</p>
+<p><img src="/2019/11/08/某动态防护系统原理简单调试/1573184209832.png" alt="1573184209832"></p>
+<p>应该是调用原生xhr直接进入动态防护系统加载的代码中：</p>
+<p><img src="/2019/11/08/某动态防护系统原理简单调试/1573184278586.png" alt="1573184278586"></p>
+<p>感觉像是js 的hook？怀疑是使用自动加载在静态网页的经过加密的js代码hook加载ajax的。 因为这代码混淆处理，需要花费大量时间研究，故没有向下跟踪调试。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2019/09/23/20190923/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zil0ng3033">
+      <meta itemprop="name" content="Zil0ng">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -421,7 +547,7 @@ POC编写主要为java，编写后直接编译为.class就可以，存放在vuln
     <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2019/06/08/安卓自代理抓包的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zil0ng3033">
+      <meta itemprop="name" content="Zil0ng">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -556,7 +682,7 @@ POC编写主要为java，编写后直接编译为.class就可以，存放在vuln
     <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2019/06/01/2019042001/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zil0ng3033">
+      <meta itemprop="name" content="Zil0ng">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -712,7 +838,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Zil0ng3033</p>
+              <p class="site-author-name" itemprop="name">Zil0ng</p>
               <p class="site-description motion-element" itemprop="description">个人博客</p>
           </div>
 
@@ -723,7 +849,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -736,7 +862,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -753,6 +879,18 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
                     <a href="https://github.com/zilong3033" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zilong3033@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/zil0ng3033" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
                   </span>
                 
             </div>
@@ -787,7 +925,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Zil0ng3033</span>
+  <span class="author" itemprop="copyrightHolder">Zil0ng</span>
 
   
 </div>
