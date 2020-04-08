@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="开发,安全,测试,工具,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://blog.aikown.com/tags/index.html">
+<meta name="description" content="NetPass  内网穿透工具内网穿透工具很多，就是全都不是自己写的，这里练手试试，没有使用socks5，直接使用tcp，未加密传输。 netpass_server.py  为服务端，放在公网就行。 netpass_client.py  为客户端，放在内网运行。 用法：python netpass_client.py -h Usage: 本文件为客户端，将内网数据转发到公网监听端口。 Option">
+<meta name="keywords" content="开发,安全,测试,工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内网穿透工具">
+<meta property="og:url" content="http://blog.aikown.com/2020/04/08/内网穿透工具/index.html">
 <meta property="og:site_name" content="个人博客|Zil0ng&#39;s Bolg">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="NetPass  内网穿透工具内网穿透工具很多，就是全都不是自己写的，这里练手试试，没有使用socks5，直接使用tcp，未加密传输。 netpass_server.py  为服务端，放在公网就行。 netpass_client.py  为客户端，放在内网运行。 用法：python netpass_client.py -h Usage: 本文件为客户端，将内网数据转发到公网监听端口。 Option">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-24T06:50:21.918Z">
+<meta property="og:updated_time" content="2020-04-08T03:33:03.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="内网穿透工具">
+<meta name="twitter:description" content="NetPass  内网穿透工具内网穿透工具很多，就是全都不是自己写的，这里练手试试，没有使用socks5，直接使用tcp，未加密传输。 netpass_server.py  为服务端，放在公网就行。 netpass_client.py  为客户端，放在内网运行。 用法：python netpass_client.py -h Usage: 本文件为客户端，将内网数据转发到公网监听端口。 Option">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.aikown.com/tags/">
+  <link rel="canonical" href="http://blog.aikown.com/2020/04/08/内网穿透工具/">
 
 
 
 
 
-  <title>tags | 个人博客|Zil0ng's Bolg</title>
+  <title>内网穿透工具 | 个人博客|Zil0ng's Bolg</title>
   
 
 
@@ -270,33 +271,166 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2020/04/08/内网穿透工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zil0ng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客|Zil0ng's Bolg">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">内网穿透工具</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-08T11:32:01+08:00">
+                2020-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="NetPass-内网穿透工具"><a href="#NetPass-内网穿透工具" class="headerlink" title="NetPass  内网穿透工具"></a>NetPass  内网穿透工具</h4><p><strong>内网穿透工具很多，就是全都不是自己写的，这里练手试试，没有使用socks5，直接使用tcp，未加密传输。</strong></p>
+<p>netpass_server.py  为服务端，放在公网就行。</p>
+<p>netpass_client.py  为客户端，放在内网运行。</p>
+<h5 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h5><p><strong>python netpass_client.py -h</strong></p>
+<p>Usage: 本文件为客户端，将内网数据转发到公网监听端口。</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口<br>  -d DHOST, –dhost=DHOST<br>                        连接远程IP<br>  -p DPORT, –dport=DPORT<br>                        连接远程端口</p>
+<p><strong>python netpass_server.py -h</strong></p>
+<p>Usage: 本文件为服务端，放在公网</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口</p>
+<h5 id="栗子："><a href="#栗子：" class="headerlink" title="栗子："></a>栗子：</h5><p>python netpass_server.py -l 80     #公网10.0.10.2</p>
+<p>python netpass_client.py  -s  127.0.0.1 -l 8080 -d 10.0.10.2  -p 80     #本地</p>
+<p>将本地127.0.0.1:8080 服务转发到公网10.0.10.2 的80端口</p>
+<p>访问公网80端口就可以访问本地8080端口。</p>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p>每个连接会自动开启一个随机端口访问，一个设备只有65535个逻辑端口，不适用大范围访问。</p>
+<p>后续再改进。</p>
+<h4 id="lcx端口转发工具"><a href="#lcx端口转发工具" class="headerlink" title="lcx端口转发工具"></a>lcx端口转发工具</h4><p>自己手写的lcx工具，为了练习下代码，虽然写的很low，但是还能用。</p>
+<h5 id="用法：-1"><a href="#用法：-1" class="headerlink" title="用法："></a>用法：</h5><p><strong>python lcx.py -h</strong></p>
+<p>Usage: lcx -s 127.0.0.1 -l 8080 -d 192.168.0.1 -p 8888</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口<br>  -d DHOST, –dhost=DHOST<br>                        连接远程IP<br>  -p DPORT, –dport=DPORT<br>                        连接远程端口</p>
+<h5 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h5><p>监听本地端口，将远程服务转发到本地。也可以实现本地的端口转发。</p>
+<h5 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h5><p>结合上面NetPass工具可以实现内网转发，内网穿透。</p>
+<h5 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h5><p>每个连接会自动开启一个随机端口访问，一个设备只有65535个逻辑端口，不适用大范围访问。</p>
+<p>后续再改进。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/开发-安全-测试-工具/" rel="tag"># 开发,安全,测试,工具</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/08/某动态防护系统原理简单调试/" rel="next" title="某动态防护系统原理简单调试">
+                <i class="fa fa-chevron-left"></i> 某动态防护系统原理简单调试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -329,8 +463,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -403,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#NetPass-内网穿透工具"><span class="nav-number">1.</span> <span class="nav-text">NetPass  内网穿透工具</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#用法："><span class="nav-number">1.1.</span> <span class="nav-text">用法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#栗子："><span class="nav-number">1.2.</span> <span class="nav-text">栗子：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点："><span class="nav-number">1.3.</span> <span class="nav-text">缺点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lcx端口转发工具"><span class="nav-number">2.</span> <span class="nav-text">lcx端口转发工具</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#用法：-1"><span class="nav-number">2.1.</span> <span class="nav-text">用法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#介绍："><span class="nav-number">2.2.</span> <span class="nav-text">介绍：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#作用："><span class="nav-number">2.3.</span> <span class="nav-text">作用：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点：-1"><span class="nav-number">2.4.</span> <span class="nav-text">缺点：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

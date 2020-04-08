@@ -282,6 +282,148 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2020/04/08/内网穿透工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zil0ng">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客|Zil0ng's Bolg">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/08/内网穿透工具/" itemprop="url">内网穿透工具</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-08T11:32:01+08:00">
+                2020-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="NetPass-内网穿透工具"><a href="#NetPass-内网穿透工具" class="headerlink" title="NetPass  内网穿透工具"></a>NetPass  内网穿透工具</h4><p><strong>内网穿透工具很多，就是全都不是自己写的，这里练手试试，没有使用socks5，直接使用tcp，未加密传输。</strong></p>
+<p>netpass_server.py  为服务端，放在公网就行。</p>
+<p>netpass_client.py  为客户端，放在内网运行。</p>
+<h5 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h5><p><strong>python netpass_client.py -h</strong></p>
+<p>Usage: 本文件为客户端，将内网数据转发到公网监听端口。</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口<br>  -d DHOST, –dhost=DHOST<br>                        连接远程IP<br>  -p DPORT, –dport=DPORT<br>                        连接远程端口</p>
+<p><strong>python netpass_server.py -h</strong></p>
+<p>Usage: 本文件为服务端，放在公网</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口</p>
+<h5 id="栗子："><a href="#栗子：" class="headerlink" title="栗子："></a>栗子：</h5><p>python netpass_server.py -l 80     #公网10.0.10.2</p>
+<p>python netpass_client.py  -s  127.0.0.1 -l 8080 -d 10.0.10.2  -p 80     #本地</p>
+<p>将本地127.0.0.1:8080 服务转发到公网10.0.10.2 的80端口</p>
+<p>访问公网80端口就可以访问本地8080端口。</p>
+<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><p>每个连接会自动开启一个随机端口访问，一个设备只有65535个逻辑端口，不适用大范围访问。</p>
+<p>后续再改进。</p>
+<h4 id="lcx端口转发工具"><a href="#lcx端口转发工具" class="headerlink" title="lcx端口转发工具"></a>lcx端口转发工具</h4><p>自己手写的lcx工具，为了练习下代码，虽然写的很low，但是还能用。</p>
+<h5 id="用法：-1"><a href="#用法：-1" class="headerlink" title="用法："></a>用法：</h5><p><strong>python lcx.py -h</strong></p>
+<p>Usage: lcx -s 127.0.0.1 -l 8080 -d 192.168.0.1 -p 8888</p>
+<p>Options:<br>  -h, –help            show this help message and exit<br>  -s LHOST, –lhost=LHOST<br>                        绑定本地地址<br>  -l LPORT, –lport=LPORT<br>                        监听本地端口<br>  -d DHOST, –dhost=DHOST<br>                        连接远程IP<br>  -p DPORT, –dport=DPORT<br>                        连接远程端口</p>
+<h5 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h5><p>监听本地端口，将远程服务转发到本地。也可以实现本地的端口转发。</p>
+<h5 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h5><p>结合上面NetPass工具可以实现内网转发，内网穿透。</p>
+<h5 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h5><p>每个连接会自动开启一个随机端口访问，一个设备只有65535个逻辑端口，不适用大范围访问。</p>
+<p>后续再改进。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://blog.aikown.com/2019/11/08/某动态防护系统原理简单调试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -849,7 +991,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -862,7 +1004,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -921,7 +1063,7 @@ awvs11的api等），并通过传统方式分析网站信息并加载payload，�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
